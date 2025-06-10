@@ -10,4 +10,11 @@ npm install
 npm start
 ```
 
-O app inclui telas de cadastro/login, agendamento de consultas, envio de documentos e chat de suporte com IA (simulado).
+
+
+Se precisar atualizar depend\u00eancias:
+
+```bash
+docker compose build --no-cache
+docker compose up
+```
