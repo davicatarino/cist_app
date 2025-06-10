@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { View, Text, Button, StyleSheet, Alert } from 'react-native';
+import { View, Text, StyleSheet, Alert } from 'react-native';
+import PrimaryButton from '../components/PrimaryButton';
+import theme from '../theme';
 import * as DocumentPicker from 'expo-document-picker';
 
 export default function UploadDocScreen() {
@@ -20,14 +22,15 @@ export default function UploadDocScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Enviar Documentos</Text>
-      <Button title="Escolher arquivo" onPress={pickFile} />
+      <PrimaryButton title="Escolher arquivo" onPress={pickFile} />
       {file && <Text>{file.name}</Text>}
-      <Button title="Enviar" onPress={handleSubmit} />
+      <PrimaryButton title="Enviar" onPress={handleSubmit} style={styles.secondary} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: 8 },
-  title: { fontSize: 20, marginBottom: 20 }
+  container: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: 8, backgroundColor: theme.colors.background },
+  title: { fontSize: 20, marginBottom: 20 },
+  secondary: { backgroundColor: theme.colors.card }
 });

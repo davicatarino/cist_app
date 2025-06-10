@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { View, Text, TextInput, StyleSheet } from 'react-native';
+import PrimaryButton from '../components/PrimaryButton';
+import theme from '../theme';
 
 export default function RegisterScreen({ navigation, onRegister }) {
   const [email, setEmail] = useState('');
@@ -25,14 +27,15 @@ export default function RegisterScreen({ navigation, onRegister }) {
         value={password}
         onChangeText={setPassword}
       />
-      <Button title="Cadastrar" onPress={handleSubmit} />
-      <Button title="Voltar" onPress={() => navigation.goBack()} />
+      <PrimaryButton title="Cadastrar" onPress={handleSubmit} />
+      <PrimaryButton title="Voltar" onPress={() => navigation.goBack()} style={styles.secondary} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 20, gap: 8 },
+  container: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 20, gap: 8, backgroundColor: theme.colors.background },
   title: { fontSize: 20, marginBottom: 20 },
-  input: { height: 40, borderColor: '#ccc', borderWidth: 1, width: '100%', paddingHorizontal: 8 }
+  input: { height: 40, borderColor: '#ccc', borderWidth: 1, width: '100%', paddingHorizontal: 8 },
+  secondary: { backgroundColor: theme.colors.card }
 });
