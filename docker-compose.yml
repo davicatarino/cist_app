@@ -1,0 +1,12 @@
+services:
+  mobile:
+    build: .
+    volumes:
+      - ./mobile:/app/mobile
+    ports:
+      - "19000:19000"
+      - "19001:19001"
+      - "19002:19002"
+    environment:
+      - EXPO_DEVTOOLS_LISTEN_ADDRESS=0.0.0.0
+    command: npx expo start --tunnel --no-interactive
