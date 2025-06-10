@@ -11,3 +11,11 @@ npm start
 ```
 
 O app inclui telas de cadastro/login, agendamento de consultas, envio de documentos e chat de suporte com IA (simulado).
+
+## Com Docker
+
+Execute com o Docker Compose presente na raiz do reposit\u00f3rio:
+
+```bash
+docker compose up
+```
