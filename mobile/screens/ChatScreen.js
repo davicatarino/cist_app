@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, TextInput, ScrollView, StyleSheet } from 'react-native';
+import PrimaryButton from '../components/PrimaryButton';
+import theme from '../theme';
 
 export default function ChatScreen() {
   const [messages, setMessages] = useState([]);
@@ -19,13 +21,13 @@ export default function ChatScreen() {
         ))}
       </ScrollView>
       <TextInput style={styles.input} value={input} onChangeText={setInput} />
-      <Button title="Enviar" onPress={sendMessage} />
+      <PrimaryButton title="Enviar" onPress={sendMessage} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20 },
+  container: { flex: 1, padding: 20, backgroundColor: theme.colors.background },
   title: { fontSize: 20, marginBottom: 20, textAlign: 'center' },
   messages: { flex: 1, marginBottom: 10 },
   input: { height: 40, borderColor: '#ccc', borderWidth: 1, paddingHorizontal: 8, marginBottom: 10 },

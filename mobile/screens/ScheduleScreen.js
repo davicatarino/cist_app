@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { View, Text, Button, StyleSheet, Alert } from 'react-native';
+import { View, Text, StyleSheet, Alert } from 'react-native';
+import PrimaryButton from '../components/PrimaryButton';
+import theme from '../theme';
 import { Picker } from '@react-native-picker/picker';
 
 const specialties = ['Cardiologia', 'Dermatologia', 'Ortopedia'];
@@ -42,12 +44,12 @@ export default function ScheduleScreen() {
           <Picker.Item key={t} label={t} value={t} />
         ))}
       </Picker>
-      <Button title="Agendar" onPress={handleSubmit} />
+      <PrimaryButton title="Agendar" onPress={handleSubmit} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20 },
+  container: { flex: 1, padding: 20, backgroundColor: theme.colors.background },
   title: { fontSize: 20, marginBottom: 20, textAlign: 'center' }
 });
