@@ -10,6 +10,10 @@ npm install
 npm start
 ```
 
+Em aparelhos com Android 14 (API 34) o app falha ao iniciar por exigir a
+permissão privilegiada `DETECT_SCREEN_CAPTURE`. Utilize Android 13 ou
+anterior, ou aguarde uma correção das dependências do Expo/React Native.
+
 O app inclui telas de cadastro/login, agendamento de consultas, envio de documentos e chat de suporte com IA (simulado).
 
 ## Com Docker
