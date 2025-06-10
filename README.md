@@ -1,8 +1,8 @@
-# CIST App
+# CIST Mobile
 
-Este reposit\u00f3rio cont\u00e9m um aplicativo em React Native (Expo) para a Cl\u00ednica CIST.
+Aplicativo em React Native (Expo) para a Cl\u00ednica CIST.
 
-## Como executar localmente
+## Como executar
 
 ```bash
 cd mobile
@@ -10,7 +10,9 @@ npm install
 npm start
 ```
 
-Se precisar atualizar depend\u00eancias, execute:
+
+
+Se precisar atualizar depend\u00eancias:
 
 ```bash
 docker compose build --no-cache
