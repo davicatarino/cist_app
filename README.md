@@ -1,3 +1,5 @@
+A imagem usa o novo Expo CLI (executado com `npx expo`), portanto não é necessário instalar `expo-cli` globalmente.
+
 # CIST Mobile
 
 

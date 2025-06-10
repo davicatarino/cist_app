@@ -20,6 +20,8 @@ Execute com o Docker Compose presente na raiz do reposit\u00f3rio:
 docker compose up
 ```
 
+O cont\u00eainer utiliza o novo Expo CLI (executado com `npx expo`), portanto n\u00e3o \u00e9 necess\u00e1rio instalar `expo-cli` globalmente.
+
 Se precisar atualizar depend\u00eancias:
 
 ```bash

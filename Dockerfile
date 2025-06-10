@@ -1,7 +1,6 @@
 FROM node:18
 
-# Install expo-cli globally
-RUN npm install -g expo-cli
+# Use local Expo CLI that comes with the project dependencies
 
 # Create app directory
 WORKDIR /app
@@ -19,4 +18,4 @@ WORKDIR /app/mobile
 
 EXPOSE 19000 19001 19002
 
-CMD ["npx", "expo", "start", "--tunnel", "--no-interactive"]
+CMD ["npx", "expo", "start", "--tunnel", "--non-interactive"]
