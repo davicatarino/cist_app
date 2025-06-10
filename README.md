@@ -2,6 +2,8 @@
 
 Interface inspirada no site oficial da CIST com cores atualizadas e navega\u00e7\u00e3o por abas.
 
+O aplicativo agora persiste o login com `AsyncStorage`, mantendo o acesso mesmo ap\u00f3s fechar o app. Os agendamentos realizados s\u00e3o salvos em cache para serem exibidos na tela inicial.
+
 
 
 

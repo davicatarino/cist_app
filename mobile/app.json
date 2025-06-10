@@ -11,8 +11,12 @@
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
-      "**/*"
-    ],
+        "**/*"
+      ],
+      "splash": {
+        "resizeMode": "contain",
+        "backgroundColor": "#68ccd1"
+      },
     "android": {
       "permissions": ["android.permission.DETECT_SCREEN_CAPTURE"]
     }
