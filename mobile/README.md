@@ -20,6 +20,7 @@ Execute com o Docker Compose presente na raiz do reposit\u00f3rio:
 docker compose up
 ```
 
+
 Se precisar atualizar depend\u00eancias:
 
 ```bash
