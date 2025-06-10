@@ -10,3 +10,9 @@ npm install
 npm start
 ```
 
+Se precisar atualizar depend\u00eancias, execute:
+
+```bash
+docker compose build --no-cache
+docker compose up
+```

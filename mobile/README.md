@@ -11,3 +11,10 @@ npm start
 ```
 
 
+
+Se precisar atualizar depend\u00eancias:
+
+```bash
+docker compose build --no-cache
+docker compose up
+```
