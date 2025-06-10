@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Alert } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import PrimaryButton from '../components/PrimaryButton';
 import theme from '../theme';
 import { Picker } from '@react-native-picker/picker';
@@ -17,7 +18,12 @@ export default function ScheduleScreen() {
   const [doctor, setDoctor] = useState('Dr. Silva');
   const [time, setTime] = useState('09:00');
 
-  function handleSubmit() {
+  async function handleSubmit() {
+    const appt = { id: Date.now().toString(), specialty, doctor, time };
+    const stored = await AsyncStorage.getItem('appointments');
+    const list = stored ? JSON.parse(stored) : [];
+    list.push(appt);
+    await AsyncStorage.setItem('appointments', JSON.stringify(list));
     Alert.alert('Agendamento', `Consulta marcada com ${doctor} \u00e0s ${time}`);
   }
 

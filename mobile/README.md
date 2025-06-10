@@ -13,6 +13,7 @@ npm start
 Em aparelhos com Android 14 (API 34) o app falha ao iniciar por exigir a
 permissão privilegiada `DETECT_SCREEN_CAPTURE`. Utilize Android 13 ou
 anterior, ou aguarde uma correção das dependências do Expo/React Native.
+O login do usuário fica salvo em `AsyncStorage`, permitindo reabrir o app já autenticado. Os agendamentos são armazenados localmente para aparecerem na tela inicial.
 
 O app inclui telas de cadastro/login, agendamento de consultas, envio de documentos e chat de suporte com IA (simulado). A interface segue as cores do site da CIST e conta com navega\u00e7\u00e3o por abas.
 
